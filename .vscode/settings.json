@@ -1,0 +1,14 @@
+{
+"window.zoomLevel": 0,
+"workbench.sideBar.location": "left",
+"workbench.statusBar.feedback.visible": false,
+"editor.renderWhitespace": "none",
+"breadcrumbs.enabled": true,
+"files.autoSave": "afterDelay",
+"C_Cpp.updateChannel": "Insiders",
+"editor.renderControlCharacters": false,
+"go.formatTool": "goimports",
+"go.useLanguageServer": true,
+"go.autocompleteUnimportedPackages": true,
+"go.gocodeAutoBuild": true
+}
