@@ -3,7 +3,10 @@ package main
 
 func main() {
 
-	cards := newDeckFromFile("saved-deck")
-	cards.print()	
+	cards := newDeck()
+	
+	cards.print()
+	cards.shuffle()
+	cards.print()
 
 }
