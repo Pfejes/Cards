@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -42,4 +43,16 @@ func (cards deck) toString() string {
 
 func (cards deck) saveToFile(fileName string) error {
 	return ioutil.WriteFile(fileName, []byte(cards.toString()), 0666)
+}
+
+func newDeckFromFile(fileName string) deck {
+	bs, err := ioutil.ReadFile(fileName)
+	if err != nil {
+		// Option #1 - log the error and return a call to newDeck()
+		// Option #2 - log the error and quit the program
+		fmt.Println("Error: ", err)
+		os.Exit(1)
+	}
+
+	return deck(strings.Split(string(bs), ","))
 }
